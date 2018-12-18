@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <link rel="icon" href="{% static "images/Kenpachi_Zaraki.jpg" %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href=" {% static "css/style.css" %}  ">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          Welcome
+        </a>
+      </div>
+      <ul class= "nav navbar-nav">
+        <li><a href="{% url "app1:index" %}" >Home</a></li>
+        <li><a href="{% url "app1:purchase" %}" >Purchase</a></li>
+        <li><a href="{% url "admin:index" %}" >Admin</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div id=two class="jumbotron" src=" {% static "images/naruto.jpg" %}  ">
+
+      <h1>VirTUAL bOOkS!</h1>
+
+    </div>
+    {% block body_block %}
+    <div class="container" id=k>
+      <h2>From the Creator</h2>
+      <div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src=" {% static "images/1509070512655.jpg" %} " >
+      <div class="caption">
+        <p>My name is Samuel Okei Oghenetega and I am the author of this small wesite.
+        I think the opportunity to make this was amazing irrespective of the time frame and the difficulties associated
+        I am especially appreciative of risa as an organization and I am happy that they allowed the start od this program
+        Thank you</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <h2>About Website</h2>
+  <p class="p">The idea behind this website is the purchase of acces codes.
+    Its is a small two page website that prints an acces code for the next user when asked for.
+    It was created with the Django interface and Html Css and Javascript on the front end.
+    This is incomplete as a result of lack of time. </p>
+
+</div>
+</div>
+<p ><a id=c class="btn btn-lg" href="{% url "app1:purchase" %}" role="button">Click here to get acces codes</a></p>
+{% endblock %}
+<div class="jumbotron">
+<h3>Contact information</h3>
+  <ul>
+    <li>email:okeisam@yahoo.com, samuel.o.okei@ttu.edu</li>
+    <li>linkedin:https://www.linkedin.com/in/samuel-okei-123237156/</li>
+    <li>github:https://github.com/Tegasaur</li>
+  </ul>
+</div>
+  </body>
+</html>
